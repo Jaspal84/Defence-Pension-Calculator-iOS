@@ -1,0 +1,119 @@
+[0/1] Planning build
+Building for debugging...
+[0/4] Write swift-version-7EBA86506DB09437.txt
+Build complete! (0.23s)
+Test Suite 'All tests' started at 2026-11-02 08:27:16.901
+Test Suite 'debug.xctest' started at 2026-11-02 08:27:16.903
+Test Suite 'ArrearsTests' started at 2026-11-02 08:27:16.903
+Test Case 'ArrearsTests.testDRChangeAndPreviouslyPaid' started at 2026-11-02 08:27:16.903
+Test Case 'ArrearsTests.testDRChangeAndPreviouslyPaid' passed (0.003 seconds)
+Test Case 'ArrearsTests.testLeapDaySingleDay' started at 2026-11-02 08:27:16.906
+Test Case 'ArrearsTests.testLeapDaySingleDay' passed (0.0 seconds)
+Test Case 'ArrearsTests.testNegativeRecoveryPreserved' started at 2026-11-02 08:27:16.906
+Test Case 'ArrearsTests.testNegativeRecoveryPreserved' passed (0.001 seconds)
+Test Case 'ArrearsTests.testPartialMonthAndMidMonthDRChange' started at 2026-11-02 08:27:16.907
+Test Case 'ArrearsTests.testPartialMonthAndMidMonthDRChange' passed (0.0 seconds)
+Test Case 'ArrearsTests.testScheduleGapsDuplicatesAndDates' started at 2026-11-02 08:27:16.907
+Test Case 'ArrearsTests.testScheduleGapsDuplicatesAndDates' passed (0.0 seconds)
+Test Case 'ArrearsTests.testUnsortedScheduleIsSorted' started at 2026-11-02 08:27:16.908
+Test Case 'ArrearsTests.testUnsortedScheduleIsSorted' passed (0.001 seconds)
+Test Suite 'ArrearsTests' passed at 2026-11-02 08:27:16.908
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.005 (0.005) seconds
+Test Suite 'CommutationTests' started at 2026-11-02 08:27:16.908
+Test Case 'CommutationTests.testCommencementMustBeConfirmedAndOrdered' started at 2026-11-02 08:27:16.908
+Test Case 'CommutationTests.testCommencementMustBeConfirmedAndOrdered' passed (0.002 seconds)
+Test Case 'CommutationTests.testConvenienceAPIRequiresExplicitContext' started at 2026-11-02 08:27:16.911
+Test Case 'CommutationTests.testConvenienceAPIRequiresExplicitContext' passed (0.101 seconds)
+Test Case 'CommutationTests.testConvenienceAPIUsesExplicitContext' started at 2026-11-02 08:27:17.012
+Test Case 'CommutationTests.testConvenienceAPIUsesExplicitContext' passed (0.001 seconds)
+Test Case 'CommutationTests.testInvalidAgeFactorAndCategory' started at 2026-11-02 08:27:17.013
+Test Case 'CommutationTests.testInvalidAgeFactorAndCategory' passed (0.001 seconds)
+Test Case 'CommutationTests.testLeapDayRestoration' started at 2026-11-02 08:27:17.014
+Test Case 'CommutationTests.testLeapDayRestoration' passed (0.0 seconds)
+Test Case 'CommutationTests.testMissingFactorNotInvented' started at 2026-11-02 08:27:17.014
+Test Case 'CommutationTests.testMissingFactorNotInvented' passed (0.0 seconds)
+Test Case 'CommutationTests.testPercentageLimits' started at 2026-11-02 08:27:17.015
+Test Case 'CommutationTests.testPercentageLimits' passed (0.001 seconds)
+Test Case 'CommutationTests.testSyntheticLumpSumDRAndRestoration' started at 2026-11-02 08:27:17.016
+Test Case 'CommutationTests.testSyntheticLumpSumDRAndRestoration' passed (0.001 seconds)
+Test Suite 'CommutationTests' passed at 2026-11-02 08:27:17.016
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.108 (0.108) seconds
+Test Suite 'DisabilityPensionTests' started at 2026-11-02 08:27:17.016
+Test Case 'DisabilityPensionTests.testAttributableAndAggravated' started at 2026-11-02 08:27:17.016
+Test Case 'DisabilityPensionTests.testAttributableAndAggravated' passed (0.102 seconds)
+Test Case 'DisabilityPensionTests.testBroadBandingBoundariesSynthetic' started at 2026-11-02 08:27:17.118
+Test Case 'DisabilityPensionTests.testBroadBandingBoundariesSynthetic' passed (0.002 seconds)
+Test Case 'DisabilityPensionTests.testConvenienceDisabilityInterface' started at 2026-11-02 08:27:17.120
+Test Case 'DisabilityPensionTests.testConvenienceDisabilityInterface' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testInvalidPercent' started at 2026-11-02 08:27:17.121
+Test Case 'DisabilityPensionTests.testInvalidPercent' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testNeitherAndZeroRejected' started at 2026-11-02 08:27:17.122
+Test Case 'DisabilityPensionTests.testNeitherAndZeroRejected' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testRetirementBroadBandingNotAssumed' started at 2026-11-02 08:27:17.123
+Test Case 'DisabilityPensionTests.testRetirementBroadBandingNotAssumed' passed (0.0 seconds)
+Test Case 'DisabilityPensionTests.testWarInjuryDistinctFromOrdinaryDisability' started at 2026-11-02 08:27:17.124
+Test Case 'DisabilityPensionTests.testWarInjuryDistinctFromOrdinaryDisability' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testWarInjuryNeedsCategory' started at 2026-11-02 08:27:17.125
+Test Case 'DisabilityPensionTests.testWarInjuryNeedsCategory' passed (0.001 seconds)
+Test Suite 'DisabilityPensionTests' passed at 2026-11-02 08:27:17.125
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.109 (0.109) seconds
+Test Suite 'FamilyPensionTests' started at 2026-11-02 08:27:17.125
+Test Case 'FamilyPensionTests.testEnhancedDurationInclusive' started at 2026-11-02 08:27:17.125
+Test Case 'FamilyPensionTests.testEnhancedDurationInclusive' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testEnhancedEndDateIncludesWholeIndianCalendarDay' started at 2026-11-02 08:27:17.126
+Test Case 'FamilyPensionTests.testEnhancedEndDateIncludesWholeIndianCalendarDay' passed (0.0 seconds)
+Test Case 'FamilyPensionTests.testMissingEligibilityInvalidDatesAndNegativePay' started at 2026-11-02 08:27:17.127
+Test Case 'FamilyPensionTests.testMissingEligibilityInvalidDatesAndNegativePay' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testOrdinarySynthetic' started at 2026-11-02 08:27:17.128
+Test Case 'FamilyPensionTests.testOrdinarySynthetic' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testSpecialAndLiberalizedNeedCircumstances' started at 2026-11-02 08:27:17.128
+Test Case 'FamilyPensionTests.testSpecialAndLiberalizedNeedCircumstances' passed (0.001 seconds)
+Test Suite 'FamilyPensionTests' passed at 2026-11-02 08:27:17.130
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'PensionCalculationEngineTests' started at 2026-11-02 08:27:17.130
+Test Case 'PensionCalculationEngineTests.testClassificationRequiresExplicitInclusion' started at 2026-11-02 08:27:17.130
+Test Case 'PensionCalculationEngineTests.testClassificationRequiresExplicitInclusion' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testDRBounds' started at 2026-11-02 08:27:17.131
+Test Case 'PensionCalculationEngineTests.testDRBounds' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testInvalidDatesAndRank' started at 2026-11-02 08:27:17.131
+Test Case 'PensionCalculationEngineTests.testInvalidDatesAndRank' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testMSPCanBeExcluded' started at 2026-11-02 08:27:17.132
+Test Case 'PensionCalculationEngineTests.testMSPCanBeExcluded' passed (0.0 seconds)
+Test Case 'PensionCalculationEngineTests.testNegativeAndInvalidPeriod' started at 2026-11-02 08:27:17.133
+Test Case 'PensionCalculationEngineTests.testNegativeAndInvalidPeriod' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOfficerServiceBoundary' started at 2026-11-02 08:27:17.133
+Test Case 'PensionCalculationEngineTests.testOfficerServiceBoundary' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOtherPayRequiresAuthorization' started at 2026-11-02 08:27:17.134
+Test Case 'PensionCalculationEngineTests.testOtherPayRequiresAuthorization' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOtherRankQualifyingServiceBoundary' started at 2026-11-02 08:27:17.135
+Test Case 'PensionCalculationEngineTests.testOtherRankQualifyingServiceBoundary' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testRoundingAndNonFiniteDouble' started at 2026-11-02 08:27:17.136
+Test Case 'PensionCalculationEngineTests.testRoundingAndNonFiniteDouble' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testServiceIncludesMSPAndDR' started at 2026-11-02 08:27:17.136
+Test Case 'PensionCalculationEngineTests.testServiceIncludesMSPAndDR' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testSyntheticMinimum' started at 2026-11-02 08:27:17.137
+Test Case 'PensionCalculationEngineTests.testSyntheticMinimum' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testVerifiedRegimesUnavailable' started at 2026-11-02 08:27:17.138
+Test Case 'PensionCalculationEngineTests.testVerifiedRegimesUnavailable' passed (0.001 seconds)
+Test Suite 'PensionCalculationEngineTests' passed at 2026-11-02 08:27:17.138
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.008 (0.008) seconds
+Test Suite 'RulesRepositoryTests' started at 2026-11-02 08:27:17.138
+Test Case 'RulesRepositoryTests.testAllJSONResourcesDecode' started at 2026-11-02 08:27:17.138
+Test Case 'RulesRepositoryTests.testAllJSONResourcesDecode' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testInputCodableRoundTrip' started at 2026-11-02 08:27:17.139
+Test Case 'RulesRepositoryTests.testInputCodableRoundTrip' passed (0.101 seconds)
+Test Case 'RulesRepositoryTests.testInvalidOROPService' started at 2026-11-02 08:27:17.240
+Test Case 'RulesRepositoryTests.testInvalidOROPService' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testMissingFactorAndInvalidResource' started at 2026-11-02 08:27:17.241
+Test Case 'RulesRepositoryTests.testMissingFactorAndInvalidResource' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testMissingOfficialOROPReturnsExactMessage' started at 2026-11-02 08:27:17.241
+Test Case 'RulesRepositoryTests.testMissingOfficialOROPReturnsExactMessage' passed (0.001 seconds)
+Test Suite 'RulesRepositoryTests' passed at 2026-11-02 08:27:17.242
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.104 (0.104) seconds
+Test Suite 'debug.xctest' passed at 2026-11-02 08:27:17.242
+	 Executed 44 tests, with 0 failures (0 unexpected) in 0.338 (0.338) seconds
+Test Suite 'All tests' passed at 2026-11-02 08:27:17.242
+	 Executed 44 tests, with 0 failures (0 unexpected) in 0.338 (0.338) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.0.3 (18c42c19cac3faf)
+✔ Test run with 0 tests passed after 0.001 seconds.

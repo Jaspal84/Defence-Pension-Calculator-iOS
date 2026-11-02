@@ -1,0 +1,28 @@
+name: Swift and iOS validation
+on:
+  push:
+  pull_request:
+jobs:
+  ios:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Core XCTest
+        run: swift test --jobs 4
+      - name: iOS simulator build
+        working-directory: DefencePensionCalculator
+        run: xcodebuild -project DefencePensionCalculator.xcodeproj -scheme DefencePensionCalculator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+      - name: Select an available iPhone simulator
+        run: |
+          device_id=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; d=json.load(sys.stdin); print(next(x["udid"] for runtime,devices in d["devices"].items() if "iOS" in runtime for x in devices if x["name"].startswith("iPhone")))')
+          echo "PENSION_SIMULATOR_ID=$device_id" >> "$GITHUB_ENV"
+      - name: iOS XCTest including PDF export
+        working-directory: DefencePensionCalculator
+        run: xcodebuild -project DefencePensionCalculator.xcodeproj -scheme DefencePensionCalculator -destination "platform=iOS Simulator,id=$PENSION_SIMULATOR_ID" CODE_SIGNING_ALLOWED=NO -resultBundlePath ../validation/iOS.xcresult test
+      - name: Retain simulator test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: iOS-test-results
+          path: validation/iOS.xcresult
+          if-no-files-found: ignore

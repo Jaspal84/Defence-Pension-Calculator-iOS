@@ -1,31 +1,35 @@
 import SwiftUI
 struct ContentView: View {
     @ObservedObject var model: PensionCalculatorViewModel
+    @State private var selectedTab: AppTab = .home
     var body: some View {
-        TabView {
-            NavigationStack { ServicePensionView(model: model) }
-                .tabItem { Label("Calculator", systemImage: "shield.lefthalf.filled") }
+        TabView(selection: $selectedTab) {
             NavigationStack {
-                List {
-                    NavigationLink("Disability & war injury") { DisabilityPensionView(model: model) }
-                    NavigationLink("Family pension") { FamilyPensionView(model: model) }
-                    EstimateNotice()
-                }.navigationTitle("Disability & Family")
-            }.tabItem { Label("Family", systemImage: "person.2.fill") }
+                HomeDashboardView(model: model).proNavigationBar().navigationDestination(for: CalculatorRoute.self) { destination($0).proNavigationBar() }
+            }.tabItem { Label(AppTab.home.rawValue, systemImage: AppTab.home.symbol) }.tag(AppTab.home)
             NavigationStack {
-                List {
-                    NavigationLink("Commutation & restoration") { CommutationView(model: model) }
-                    NavigationLink("Pension arrears") { ArrearsView(model: model) }
-                    EstimateNotice()
-                }.navigationTitle("Commutation & Arrears")
-            }.tabItem { Label("Payments", systemImage: "indianrupeesign.circle") }
-            NavigationStack { OROPComparisonView(model: model) }
-                .tabItem { Label("OROP", systemImage: "chart.bar.xaxis") }
-            NavigationStack { PensionSummaryView(model: model) }
-                .tabItem { Label("Summary", systemImage: "doc.text") }
-        }
+                CalculatorDirectoryView().proNavigationBar().navigationDestination(for: CalculatorRoute.self) { destination($0).proNavigationBar() }
+            }.tabItem { Label(AppTab.calculators.rawValue, systemImage: AppTab.calculators.symbol) }.tag(AppTab.calculators)
+            NavigationStack { PensionSummaryView(model: model).proNavigationBar() }
+                .tabItem { Label(AppTab.reports.rawValue, systemImage: AppTab.reports.symbol) }.tag(AppTab.reports)
+            NavigationStack { ReferencesView(model: model).proNavigationBar() }
+                .tabItem { Label(AppTab.references.rawValue, systemImage: AppTab.references.symbol) }.tag(AppTab.references)
+            NavigationStack { SettingsView(model: model).proNavigationBar() }
+                .tabItem { Label(AppTab.settings.rawValue, systemImage: AppTab.settings.symbol) }.tag(AppTab.settings)
+        }.tint(PensionTheme.tint)
         .alert("Calculation unavailable", isPresented: Binding(get: { model.error != nil }, set: { if !$0 { model.error = nil } })) {
             Button("OK") { model.error = nil }
         } message: { Text(model.error ?? "") }
+    }
+    @ViewBuilder private func destination(_ route: CalculatorRoute) -> some View {
+        switch route {
+        case .pension: ServicePensionView(model: model)
+        case .orop: OROPComparisonView(model: model)
+        case .commutation: CommutationView(model: model)
+        case .disability: DisabilityPensionView(model: model)
+        case .family: FamilyPensionView(model: model)
+        case .arrears: ArrearsView(model: model)
+        case .gratuity, .leaveEncashment, .sevaNidhi, .npsUPS: UnavailableCalculatorView(route: route)
+        }
     }
 }

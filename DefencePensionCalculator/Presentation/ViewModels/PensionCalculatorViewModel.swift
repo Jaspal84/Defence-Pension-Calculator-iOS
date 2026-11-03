@@ -1,21 +1,5 @@
 import Foundation
 import Combine
-struct SummaryRow: Codable, Identifiable {
-    var id: String { title }
-    let title: String
-    let value: String
-}
-struct CalculationSummary: Codable {
-    let title: String
-    let date: Date
-    let status: CalculationStatus
-    let rows: [SummaryRow]
-    let assumptions: [String]
-    let rules: [String]
-    var text: String {
-        (["Defence Pension Calculator", title, DateUtilities.text(date), status.rawValue] + rows.map { "\($0.title): \($0.value)" } + ["Applied rule identifiers: " + rules.joined(separator: ", ")] + assumptions + [PensionNotice.disclaimer]).joined(separator: "\n\n")
-    }
-}
 @MainActor final class PensionCalculatorViewModel: ObservableObject {
     @Published var input = PensionInput()
     @Published var disability = DisabilityInput()
@@ -59,7 +43,16 @@ struct CalculationSummary: Codable {
         return repository
     }
     func save(_ title: String, rows: [SummaryRow], assumptions: [String], rules: [String], status: CalculationStatus = .illustrative) {
-        summary = CalculationSummary(title: title, date: Date(), status: status, rows: rows, assumptions: assumptions, rules: rules)
+        let context: [SummaryRow] = [
+            SummaryRow(title: "Selected service (context)", value: input.branch.rawValue),
+            SummaryRow(title: "Selected personnel category (context)", value: input.category.rawValue),
+            SummaryRow(title: "Selected rank (context)", value: repository?.ranks.first(where: { $0.id == input.rankID })?.name ?? input.rankID),
+            SummaryRow(title: "Selected qualifying service (context)", value: "\(input.serviceYears) years + \(input.completedHalfYears) half-year"),
+            SummaryRow(title: "Selected retirement date (context)", value: DateUtilities.text(input.retirementDate))
+        ]
+        summary = CalculationSummary(title: title, date: Date(), status: status, rows: context + rows,
+                                     assumptions: assumptions + ["Selected service context is taken from Calculator inputs. Family pension, commutation and arrears use their separate stated inputs; context does not establish eligibility."],
+                                     rules: rules, ruleMetadata: repository?.metadata.filter { rules.contains($0.id) } ?? [])
     }
     func calculateService() {
         serviceResult = nil; summary = nil
@@ -72,6 +65,12 @@ struct CalculationSummary: Codable {
                 SummaryRow(title: "Rank", value: rank),
                 SummaryRow(title: "Retirement", value: DateUtilities.text(input.retirementDate)),
                 SummaryRow(title: "Qualifying service", value: "\(input.serviceYears) years + \(input.completedHalfYears) half-year"),
+                SummaryRow(title: "Pension category", value: "Service pension"),
+                SummaryRow(title: "Basic pay input", value: Money.format(input.basicPay)),
+                SummaryRow(title: "MSP input / inclusion", value: "\(Money.format(input.msp)) / \(input.includeMSP ? "included" : "excluded")"),
+                SummaryRow(title: "Classification pay input", value: Money.format(input.classificationPay)),
+                SummaryRow(title: "Other pensionable pay input", value: Money.format(input.otherPensionablePay)),
+                SummaryRow(title: "Selected regime", value: input.regime.rawValue),
                 SummaryRow(title: "Eligible emoluments", value: Money.format(result.eligibleEmoluments)),
                 SummaryRow(title: "Basic pension", value: Money.format(result.basicPension)),
                 SummaryRow(title: "DR (\(input.drPercent)%)", value: Money.format(result.dr)),
@@ -88,6 +87,12 @@ struct CalculationSummary: Codable {
             disabilityResult = result
             save(disability.warInjury ? "War injury estimate" : "Disability estimate", rows: [
                 SummaryRow(title: "Branch / rank", value: "\(input.branch.rawValue) / \(input.rankID)"),
+                SummaryRow(title: "Personnel category", value: input.category.rawValue),
+                SummaryRow(title: "Qualifying service", value: "\(input.serviceYears) years + \(input.completedHalfYears) half-year"),
+                SummaryRow(title: "Retirement", value: DateUtilities.text(input.retirementDate)),
+                SummaryRow(title: "Basic pay / MSP", value: "\(Money.format(input.basicPay)) / \(Money.format(input.msp))"),
+                SummaryRow(title: "Classification / other pay", value: "\(Money.format(input.classificationPay)) / \(Money.format(input.otherPensionablePay))"),
+                SummaryRow(title: "DR rate", value: "\(input.drPercent)%"),
                 SummaryRow(title: "Entitlement / separation", value: "\(disability.entitlement.rawValue) / \(disability.separation.rawValue)"),
                 SummaryRow(title: "Assessed / applied disability", value: "\(result.assessedPercent)% / \(result.appliedPercent)%"),
                 SummaryRow(title: "Service element", value: Money.format(result.serviceElement)),
@@ -103,6 +108,9 @@ struct CalculationSummary: Codable {
             let result = try FamilyPensionEngine(rules: rules()).calculate(family)
             familyResult = result
             save("\(family.category.rawValue) family pension", rows: [
+                SummaryRow(title: "Date of death", value: DateUtilities.text(family.deathDate)),
+                SummaryRow(title: "Enhanced period end (if selected)", value: family.category == .enhanced ? DateUtilities.text(family.enhancedEndDate) : "Not applicable"),
+                SummaryRow(title: "DR rate", value: "\(family.drPercent)%"),
                 SummaryRow(title: "Relationship", value: family.relationship.rawValue.capitalized),
                 SummaryRow(title: "Emoluments", value: Money.format(family.emoluments)),
                 SummaryRow(title: "Calculation date", value: DateUtilities.text(family.calculationDate)),
@@ -119,6 +127,10 @@ struct CalculationSummary: Codable {
             commutationResult = result
             save("Commutation", rows: [
                 SummaryRow(title: "Age next birthday", value: String(commutation.ageNextBirthday)),
+                SummaryRow(title: "Pension category", value: commutation.pensionCategory.rawValue),
+                SummaryRow(title: "Effective commutation date", value: DateUtilities.text(commutation.effectiveDate)),
+                SummaryRow(title: "Commutation percentage", value: "\(commutation.percentage)%"),
+                SummaryRow(title: "DR rate", value: "\(commutation.drPercent)%"),
                 SummaryRow(title: "Original basic", value: Money.format(result.originalBasic)),
                 SummaryRow(title: "Commuted portion", value: Money.format(result.commutedPortion)),
                 SummaryRow(title: "Factor", value: "\(result.factor)"),

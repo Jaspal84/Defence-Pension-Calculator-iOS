@@ -2,6 +2,9 @@
 
 Created and developed by **Jaspal Singh**. This native redesign adds a navy/gold dashboard, About Developer screen and professional PDF reports while preserving the original financial engines. See [Pro design and M1 build instructions](docs/PRO-DESIGN.md), [current validation](docs/PRO-VALIDATION.md), and [App Store preparation](docs/app-store/RELEASE.md). The separate PWA is on `feat/pension-pwa` and is not included in this native branch.
 
+The current benefit-rule audit is [blocked pending official-source access](docs/rules/BENEFIT-AUDIT.md). The four additional benefit destinations remain disabled; no new verified formulas are claimed. Current audit regression: 64 Foundation tests passed.
+
+
 Native, offline SwiftUI iOS 16+ application for exploring Indian armed forces pension calculations. Built with Swift 5 language compatibility and tested using Swift 6.0.3 for the platform-independent domain layer. No external package dependencies, login, analytics or calculation networking.
 
 **Current release is an illustrative calculator, not a verified pension entitlement implementation.** Official pension orders and reference tables could not be retrieved under the cloud environment's network policy. No OROP amounts, official commutation factors or pay matrix values have been invented. These datasets are explicitly incomplete. The application blocks verified 7th CPC/OROP calculations and explains missing data rather than returning an alleged official pension.

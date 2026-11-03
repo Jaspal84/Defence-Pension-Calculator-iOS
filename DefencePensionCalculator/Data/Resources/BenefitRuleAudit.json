@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "2026-11-03.audit-1",
+  "purpose": "Research audit only. No executable benefit rules have been verified.",
+  "auditedAtUTC": "2026-11-03T02:46:05Z",
+  "enabledRuleIDs": [],
+  "sources": [
+    {
+      "id": "defence-regulations",
+      "requestedLabel": "Defence pension regulations (requested index)",
+      "sourceURL": "https://desw.gov.in/pension-regulations",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    },
+    {
+      "id": "defence-circulars",
+      "requestedLabel": "Defence pension circulars (requested index)",
+      "sourceURL": "https://www.desw.gov.in/index.php/en/pension-circulars",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    },
+    {
+      "id": "gratuity-ceiling",
+      "requestedLabel": "Government gratuity ceiling announcement (requested page)",
+      "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2022470",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    },
+    {
+      "id": "agnipath",
+      "requestedLabel": "Original Agnipath announcement and contribution table (requested page)",
+      "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1833765",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    },
+    {
+      "id": "ups",
+      "requestedLabel": "PFRDA Unified Pension Scheme (requested page)",
+      "sourceURL": "https://www.pfrda.org.in/en/web/pfrda/schemes/national-pension-system/unified-pension-scheme",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    },
+    {
+      "id": "civilian-leave",
+      "requestedLabel": "Civilian leave encashment reference (requested PDF)",
+      "sourceURL": "https://cag.gov.in/uploads/retirements/DoP-PW-booklet-0604dcc19f198f0-35607318.pdf",
+      "verificationStatus": "retrievalBlocked",
+      "sourceTitle": null,
+      "issuingAuthority": null,
+      "documentNumber": null,
+      "publicationDate": null,
+      "effectiveDate": null,
+      "ruleNumber": null,
+      "contentSHA256": null,
+      "sourceBodyInspected": false,
+      "attemptedAtUTC": "2026-11-03T02:46:05Z",
+      "proxyHTTPStatus": 403,
+      "originHTTPStatus": null,
+      "curlExitCode": 22
+    }
+  ],
+  "benefits": [
+    {
+      "id": "retirementGratuity",
+      "title": "Retirement gratuity",
+      "decision": "disabled",
+      "sourceIDs": [
+        "defence-regulations",
+        "defence-circulars",
+        "gratuity-ceiling"
+      ],
+      "applicabilityPending": "Army, Navy and Air Force categories require separate applicability review.",
+      "verificationRequired": "Verify military authority, retirement/invalidment distinctions, eligible emoluments and DA, completed service periods, minimum service, effective ceiling and statutory rounding. The civilian ceiling announcement alone does not establish a military ceiling."
+    },
+    {
+      "id": "deathGratuity",
+      "title": "Death gratuity",
+      "decision": "disabled",
+      "sourceIDs": [
+        "defence-regulations",
+        "defence-circulars",
+        "gratuity-ceiling"
+      ],
+      "applicabilityPending": "Military death benefits must be distinguished from retirement gratuity.",
+      "verificationRequired": "Verify service-specific death-benefit slabs, service boundaries, eligible emoluments, applicable ceilings, dates and rounding independently of retirement gratuity."
+    },
+    {
+      "id": "leaveEncashment",
+      "title": "Leave encashment",
+      "decision": "disabled",
+      "sourceIDs": [
+        "defence-regulations",
+        "defence-circulars",
+        "civilian-leave"
+      ],
+      "applicabilityPending": "The supplied CAG booklet is identified by the user as civilian; it is not military authority.",
+      "verificationRequired": "Retrieve separate Army/Navy/Air Force leave orders, eligible leave categories, pay definitions, DA, ceilings and restrictions. Do not import CCS civilian rules into military results."
+    },
+    {
+      "id": "sevaNidhi",
+      "title": "Agniveer Seva Nidhi",
+      "decision": "disabled",
+      "sourceIDs": [
+        "agnipath"
+      ],
+      "applicabilityPending": "Agniveer four-year engagement; regular military pension/gratuity must not be inferred.",
+      "verificationRequired": "Inspect the original contribution table and any applicable amendments before activation. The schedule and indicative exit amount in the task are not independently verified here. No authoritative interest rate, compounding method or guaranteed payout is assumed."
+    },
+    {
+      "id": "nps",
+      "title": "NPS estimator",
+      "decision": "disabled",
+      "sourceIDs": [
+        "ups"
+      ],
+      "applicabilityPending": "Eligible NPS subscribers require their own scheme-specific authority; regular Armed Forces applicability is not established.",
+      "verificationRequired": "Obtain the applicable NPS notifications separately. Verify subscriber eligibility, contribution rates, corpus/withdrawal and annuitisation rules. Investment returns and annuity quotations cannot be guaranteed."
+    },
+    {
+      "id": "ups",
+      "title": "UPS estimator",
+      "decision": "disabled",
+      "sourceIDs": [
+        "ups"
+      ],
+      "applicabilityPending": "Eligible civilian subscribers only where the applicable notification establishes eligibility; not automatically regular Armed Forces.",
+      "verificationRequired": "Verify operative notification, dates/amendments, qualifying service and minimum payout conditions, individual/benchmark corpus adjustment, withdrawal reduction, family payout and contribution rules."
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+warning: 'defence-pension-calculator-ios': found 2 file(s) which are unhandled; explicitly declare them as resources or exclude from the target
+    /workspace/Defence-Pension-Calculator-iOS/DefencePensionCalculator/PrivacyInfo.xcprivacy
+    /workspace/Defence-Pension-Calculator-iOS/DefencePensionCalculator/LaunchScreen.storyboard
+[0/1] Planning build
+Building for debugging...
+[0/12] Copying BenefitRuleAudit.json
+[0/12] Write sources
+[3/12] Write swift-version-7EBA86506DB09437.txt
+[5/15] Compiling PensionCore BenefitRuleAuditModels.swift
+[6/15] Compiling PensionCore BenefitRuleAuditRepository.swift
+[7/15] Emitting module PensionCore
+[8/16] Wrapping AST for PensionCore for debugging
+[10/23] Compiling PensionCoreTests CommutationTests.swift
+[11/23] Compiling PensionCoreTests DisabilityPensionTests.swift
+[12/23] Compiling PensionCoreTests FamilyPensionTests.swift
+[13/23] Compiling PensionCoreTests PensionCalculationEngineTests.swift
+[14/25] Compiling PensionCoreTests ArrearsTests.swift
+[15/25] Compiling PensionCoreTests BenefitRuleAuditTests.swift
+[16/25] Emitting module PensionCoreTests
+[17/25] Compiling PensionCoreTests ProPresentationModelTests.swift
+[18/25] Compiling PensionCoreTests RulesRepositoryTests.swift
+[19/26] /workspace/scratch/pension-swift/build/x86_64-unknown-linux-gnu/debug/DefencePensionCalculatorPackageDiscoveredTests.derived/all-discovered-tests.swift
+[20/27] Write sources
+[21/27] Wrapping AST for PensionCoreTests for debugging
+[23/30] Compiling DefencePensionCalculatorPackageDiscoveredTests all-discovered-tests.swift
+[24/30] Compiling DefencePensionCalculatorPackageDiscoveredTests PensionCoreTests.swift
+[25/30] Emitting module DefencePensionCalculatorPackageDiscoveredTests
+[26/31] /workspace/scratch/pension-swift/build/x86_64-unknown-linux-gnu/debug/DefencePensionCalculatorPackageTests.derived/runner.swift
+[27/32] Write sources
+[28/32] Wrapping AST for DefencePensionCalculatorPackageDiscoveredTests for debugging
+[30/34] Compiling DefencePensionCalculatorPackageTests runner.swift
+[31/34] Emitting module DefencePensionCalculatorPackageTests
+[32/34] Write Objects.LinkFileList
+[33/34] Linking DefencePensionCalculatorPackageTests.xctest
+Build complete! (3.24s)
+Test Suite 'All tests' started at 2026-11-03 02:46:33.842
+Test Suite 'debug.xctest' started at 2026-11-03 02:46:33.844
+Test Suite 'ArrearsTests' started at 2026-11-03 02:46:33.844
+Test Case 'ArrearsTests.testDRChangeAndPreviouslyPaid' started at 2026-11-03 02:46:33.844
+Test Case 'ArrearsTests.testDRChangeAndPreviouslyPaid' passed (0.003 seconds)
+Test Case 'ArrearsTests.testLeapDaySingleDay' started at 2026-11-03 02:46:33.847
+Test Case 'ArrearsTests.testLeapDaySingleDay' passed (0.101 seconds)
+Test Case 'ArrearsTests.testNegativeRecoveryPreserved' started at 2026-11-03 02:46:33.947
+Test Case 'ArrearsTests.testNegativeRecoveryPreserved' passed (0.001 seconds)
+Test Case 'ArrearsTests.testPartialMonthAndMidMonthDRChange' started at 2026-11-03 02:46:33.948
+Test Case 'ArrearsTests.testPartialMonthAndMidMonthDRChange' passed (0.0 seconds)
+Test Case 'ArrearsTests.testScheduleGapsDuplicatesAndDates' started at 2026-11-03 02:46:33.948
+Test Case 'ArrearsTests.testScheduleGapsDuplicatesAndDates' passed (0.0 seconds)
+Test Case 'ArrearsTests.testUnsortedScheduleIsSorted' started at 2026-11-03 02:46:33.949
+Test Case 'ArrearsTests.testUnsortedScheduleIsSorted' passed (0.001 seconds)
+Test Suite 'ArrearsTests' passed at 2026-11-03 02:46:33.950
+	 Executed 6 tests, with 0 failures (0 unexpected) in 0.106 (0.106) seconds
+Test Suite 'BenefitRuleAuditTests' started at 2026-11-03 02:46:33.950
+Test Case 'BenefitRuleAuditTests.testAllSixRequestedSourcesRetainTheirExactOfficialURLs' started at 2026-11-03 02:46:33.950
+Test Case 'BenefitRuleAuditTests.testAllSixRequestedSourcesRetainTheirExactOfficialURLs' passed (0.001 seconds)
+Test Case 'BenefitRuleAuditTests.testCivilianReferencesDoNotEstablishMilitaryApplicability' started at 2026-11-03 02:46:33.951
+Test Case 'BenefitRuleAuditTests.testCivilianReferencesDoNotEstablishMilitaryApplicability' passed (0.0 seconds)
+Test Case 'BenefitRuleAuditTests.testEveryBenefitResolvesItsSourceEvidenceWithoutOrphanReferences' started at 2026-11-03 02:46:33.951
+Test Case 'BenefitRuleAuditTests.testEveryBenefitResolvesItsSourceEvidenceWithoutOrphanReferences' passed (0.0 seconds)
+Test Case 'BenefitRuleAuditTests.testProxyDenialIsNotMistakenForAnOriginResponseOrVerifiedDocument' started at 2026-11-03 02:46:33.952
+Test Case 'BenefitRuleAuditTests.testProxyDenialIsNotMistakenForAnOriginResponseOrVerifiedDocument' passed (0.0 seconds)
+Test Case 'BenefitRuleAuditTests.testRetirementAndDeathAndNPSSchemesHaveSeparateResearchDecisions' started at 2026-11-03 02:46:33.952
+Test Case 'BenefitRuleAuditTests.testRetirementAndDeathAndNPSSchemesHaveSeparateResearchDecisions' passed (0.0 seconds)
+Test Case 'BenefitRuleAuditTests.testUninspectedDocumentsNeverInventTitlesDatesOrdersOrRuleNumbers' started at 2026-11-03 02:46:33.953
+Test Case 'BenefitRuleAuditTests.testUninspectedDocumentsNeverInventTitlesDatesOrdersOrRuleNumbers' passed (0.001 seconds)
+Test Case 'BenefitRuleAuditTests.testVersionedAuditLoadsWithoutEnablingUnverifiedRules' started at 2026-11-03 02:46:33.953
+Test Case 'BenefitRuleAuditTests.testVersionedAuditLoadsWithoutEnablingUnverifiedRules' passed (0.0 seconds)
+Test Suite 'BenefitRuleAuditTests' passed at 2026-11-03 02:46:33.954
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'CommutationTests' started at 2026-11-03 02:46:33.954
+Test Case 'CommutationTests.testCommencementMustBeConfirmedAndOrdered' started at 2026-11-03 02:46:33.954
+Test Case 'CommutationTests.testCommencementMustBeConfirmedAndOrdered' passed (0.001 seconds)
+Test Case 'CommutationTests.testConvenienceAPIRequiresExplicitContext' started at 2026-11-03 02:46:33.955
+Test Case 'CommutationTests.testConvenienceAPIRequiresExplicitContext' passed (0.0 seconds)
+Test Case 'CommutationTests.testConvenienceAPIUsesExplicitContext' started at 2026-11-03 02:46:33.956
+Test Case 'CommutationTests.testConvenienceAPIUsesExplicitContext' passed (0.001 seconds)
+Test Case 'CommutationTests.testInvalidAgeFactorAndCategory' started at 2026-11-03 02:46:33.957
+Test Case 'CommutationTests.testInvalidAgeFactorAndCategory' passed (0.001 seconds)
+Test Case 'CommutationTests.testLeapDayRestoration' started at 2026-11-03 02:46:33.958
+Test Case 'CommutationTests.testLeapDayRestoration' passed (0.001 seconds)
+Test Case 'CommutationTests.testMissingFactorNotInvented' started at 2026-11-03 02:46:33.958
+Test Case 'CommutationTests.testMissingFactorNotInvented' passed (0.0 seconds)
+Test Case 'CommutationTests.testPercentageLimits' started at 2026-11-03 02:46:33.959
+Test Case 'CommutationTests.testPercentageLimits' passed (0.001 seconds)
+Test Case 'CommutationTests.testSyntheticLumpSumDRAndRestoration' started at 2026-11-03 02:46:33.960
+Test Case 'CommutationTests.testSyntheticLumpSumDRAndRestoration' passed (0.0 seconds)
+Test Suite 'CommutationTests' passed at 2026-11-03 02:46:33.960
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'DisabilityPensionTests' started at 2026-11-03 02:46:33.960
+Test Case 'DisabilityPensionTests.testAttributableAndAggravated' started at 2026-11-03 02:46:33.960
+Test Case 'DisabilityPensionTests.testAttributableAndAggravated' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testBroadBandingBoundariesSynthetic' started at 2026-11-03 02:46:33.961
+Test Case 'DisabilityPensionTests.testBroadBandingBoundariesSynthetic' passed (0.002 seconds)
+Test Case 'DisabilityPensionTests.testConvenienceDisabilityInterface' started at 2026-11-03 02:46:33.963
+Test Case 'DisabilityPensionTests.testConvenienceDisabilityInterface' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testInvalidPercent' started at 2026-11-03 02:46:33.964
+Test Case 'DisabilityPensionTests.testInvalidPercent' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testNeitherAndZeroRejected' started at 2026-11-03 02:46:33.965
+Test Case 'DisabilityPensionTests.testNeitherAndZeroRejected' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testRetirementBroadBandingNotAssumed' started at 2026-11-03 02:46:33.966
+Test Case 'DisabilityPensionTests.testRetirementBroadBandingNotAssumed' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testWarInjuryDistinctFromOrdinaryDisability' started at 2026-11-03 02:46:33.966
+Test Case 'DisabilityPensionTests.testWarInjuryDistinctFromOrdinaryDisability' passed (0.001 seconds)
+Test Case 'DisabilityPensionTests.testWarInjuryNeedsCategory' started at 2026-11-03 02:46:33.967
+Test Case 'DisabilityPensionTests.testWarInjuryNeedsCategory' passed (0.001 seconds)
+Test Suite 'DisabilityPensionTests' passed at 2026-11-03 02:46:33.968
+	 Executed 8 tests, with 0 failures (0 unexpected) in 0.008 (0.008) seconds
+Test Suite 'FamilyPensionTests' started at 2026-11-03 02:46:33.968
+Test Case 'FamilyPensionTests.testEnhancedDurationInclusive' started at 2026-11-03 02:46:33.968
+Test Case 'FamilyPensionTests.testEnhancedDurationInclusive' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testEnhancedEndDateIncludesWholeIndianCalendarDay' started at 2026-11-03 02:46:33.969
+Test Case 'FamilyPensionTests.testEnhancedEndDateIncludesWholeIndianCalendarDay' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testMissingEligibilityInvalidDatesAndNegativePay' started at 2026-11-03 02:46:33.969
+Test Case 'FamilyPensionTests.testMissingEligibilityInvalidDatesAndNegativePay' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testOrdinarySynthetic' started at 2026-11-03 02:46:33.970
+Test Case 'FamilyPensionTests.testOrdinarySynthetic' passed (0.001 seconds)
+Test Case 'FamilyPensionTests.testSpecialAndLiberalizedNeedCircumstances' started at 2026-11-03 02:46:33.971
+Test Case 'FamilyPensionTests.testSpecialAndLiberalizedNeedCircumstances' passed (0.001 seconds)
+Test Suite 'FamilyPensionTests' passed at 2026-11-03 02:46:33.972
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'PensionCalculationEngineTests' started at 2026-11-03 02:46:33.972
+Test Case 'PensionCalculationEngineTests.testClassificationRequiresExplicitInclusion' started at 2026-11-03 02:46:33.972
+Test Case 'PensionCalculationEngineTests.testClassificationRequiresExplicitInclusion' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testDRBounds' started at 2026-11-03 02:46:33.973
+Test Case 'PensionCalculationEngineTests.testDRBounds' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testInvalidDatesAndRank' started at 2026-11-03 02:46:33.974
+Test Case 'PensionCalculationEngineTests.testInvalidDatesAndRank' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testMSPCanBeExcluded' started at 2026-11-03 02:46:33.975
+Test Case 'PensionCalculationEngineTests.testMSPCanBeExcluded' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testNegativeAndInvalidPeriod' started at 2026-11-03 02:46:33.975
+Test Case 'PensionCalculationEngineTests.testNegativeAndInvalidPeriod' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOfficerServiceBoundary' started at 2026-11-03 02:46:33.976
+Test Case 'PensionCalculationEngineTests.testOfficerServiceBoundary' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOtherPayRequiresAuthorization' started at 2026-11-03 02:46:33.977
+Test Case 'PensionCalculationEngineTests.testOtherPayRequiresAuthorization' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testOtherRankQualifyingServiceBoundary' started at 2026-11-03 02:46:33.977
+Test Case 'PensionCalculationEngineTests.testOtherRankQualifyingServiceBoundary' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testRoundingAndNonFiniteDouble' started at 2026-11-03 02:46:33.978
+Test Case 'PensionCalculationEngineTests.testRoundingAndNonFiniteDouble' passed (0.0 seconds)
+Test Case 'PensionCalculationEngineTests.testServiceIncludesMSPAndDR' started at 2026-11-03 02:46:33.979
+Test Case 'PensionCalculationEngineTests.testServiceIncludesMSPAndDR' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testSyntheticMinimum' started at 2026-11-03 02:46:33.979
+Test Case 'PensionCalculationEngineTests.testSyntheticMinimum' passed (0.001 seconds)
+Test Case 'PensionCalculationEngineTests.testVerifiedRegimesUnavailable' started at 2026-11-03 02:46:33.980
+Test Case 'PensionCalculationEngineTests.testVerifiedRegimesUnavailable' passed (0.001 seconds)
+Test Suite 'PensionCalculationEngineTests' passed at 2026-11-03 02:46:33.981
+	 Executed 12 tests, with 0 failures (0 unexpected) in 0.008 (0.008) seconds
+Test Suite 'ProPresentationModelTests' started at 2026-11-03 02:46:33.981
+Test Case 'ProPresentationModelTests.testAdditionalCalculatorsDoNotClaimVerifiedAvailability' started at 2026-11-03 02:46:33.981
+Test Case 'ProPresentationModelTests.testAdditionalCalculatorsDoNotClaimVerifiedAvailability' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testAllTenDashboardRoutesHaveUniqueIdentifiers' started at 2026-11-03 02:46:33.981
+Test Case 'ProPresentationModelTests.testAllTenDashboardRoutesHaveUniqueIdentifiers' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testConfiguredContactSelectorsUseSafeSchemes' started at 2026-11-03 02:46:33.982
+Test Case 'ProPresentationModelTests.testConfiguredContactSelectorsUseSafeSchemes' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testContactAndWebsiteAreAbsentUntilConfigured' started at 2026-11-03 02:46:33.982
+Test Case 'ProPresentationModelTests.testContactAndWebsiteAreAbsentUntilConfigured' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testCreatorAttributionAndIndependence' started at 2026-11-03 02:46:33.982
+Test Case 'ProPresentationModelTests.testCreatorAttributionAndIndependence' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testExistingCalculatorRoutesStayImplemented' started at 2026-11-03 02:46:33.983
+Test Case 'ProPresentationModelTests.testExistingCalculatorRoutesStayImplemented' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testFiveTabsMatchRequestedNavigation' started at 2026-11-03 02:46:33.983
+Test Case 'ProPresentationModelTests.testFiveTabsMatchRequestedNavigation' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testOROPMissingDataRemainsExplicit' started at 2026-11-03 02:46:33.983
+Test Case 'ProPresentationModelTests.testOROPMissingDataRemainsExplicit' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testOnlyAppliedVerifiedMetadataGetsDatesAndReferences' started at 2026-11-03 02:46:33.984
+Test Case 'ProPresentationModelTests.testOnlyAppliedVerifiedMetadataGetsDatesAndReferences' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testReportCodableRetainsRulesAndAssumptions' started at 2026-11-03 02:46:33.984
+Test Case 'ProPresentationModelTests.testReportCodableRetainsRulesAndAssumptions' passed (0.002 seconds)
+Test Case 'ProPresentationModelTests.testReportContainsCreatorDisclaimerAndOriginalCalculationValues' started at 2026-11-03 02:46:33.986
+Test Case 'ProPresentationModelTests.testReportContainsCreatorDisclaimerAndOriginalCalculationValues' passed (0.002 seconds)
+Test Case 'ProPresentationModelTests.testUnverifiedMetadataNeverBecomesAnOfficialCitation' started at 2026-11-03 02:46:33.987
+Test Case 'ProPresentationModelTests.testUnverifiedMetadataNeverBecomesAnOfficialCitation' passed (0.0 seconds)
+Test Case 'ProPresentationModelTests.testVersionUsesBundleMetadataRatherThanReferenceImageValue' started at 2026-11-03 02:46:33.987
+Test Case 'ProPresentationModelTests.testVersionUsesBundleMetadataRatherThanReferenceImageValue' passed (0.0 seconds)
+Test Suite 'ProPresentationModelTests' passed at 2026-11-03 02:46:33.988
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.006 (0.006) seconds
+Test Suite 'RulesRepositoryTests' started at 2026-11-03 02:46:33.988
+Test Case 'RulesRepositoryTests.testAllJSONResourcesDecode' started at 2026-11-03 02:46:33.988
+Test Case 'RulesRepositoryTests.testAllJSONResourcesDecode' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testInputCodableRoundTrip' started at 2026-11-03 02:46:33.988
+Test Case 'RulesRepositoryTests.testInputCodableRoundTrip' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testInvalidOROPService' started at 2026-11-03 02:46:33.989
+Test Case 'RulesRepositoryTests.testInvalidOROPService' passed (0.001 seconds)
+Test Case 'RulesRepositoryTests.testMissingFactorAndInvalidResource' started at 2026-11-03 02:46:33.989
+Test Case 'RulesRepositoryTests.testMissingFactorAndInvalidResource' passed (0.0 seconds)
+Test Case 'RulesRepositoryTests.testMissingOfficialOROPReturnsExactMessage' started at 2026-11-03 02:46:33.990
+Test Case 'RulesRepositoryTests.testMissingOfficialOROPReturnsExactMessage' passed (0.001 seconds)
+Test Suite 'RulesRepositoryTests' passed at 2026-11-03 02:46:33.991
+	 Executed 5 tests, with 0 failures (0 unexpected) in 0.003 (0.003) seconds
+Test Suite 'debug.xctest' passed at 2026-11-03 02:46:33.991
+	 Executed 64 tests, with 0 failures (0 unexpected) in 0.146 (0.146) seconds
+Test Suite 'All tests' passed at 2026-11-03 02:46:33.991
+	 Executed 64 tests, with 0 failures (0 unexpected) in 0.146 (0.146) seconds
+◇ Test run started.
+↳ Testing Library Version: 6.0.3 (18c42c19cac3faf)
+✔ Test run with 0 tests passed after 0.001 seconds.

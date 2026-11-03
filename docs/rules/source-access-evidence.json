@@ -1,0 +1,44 @@
+[
+  {
+    "id": "defence-regulations",
+    "url": "https://desw.gov.in/pension-regulations",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  },
+  {
+    "id": "defence-circulars",
+    "url": "https://www.desw.gov.in/index.php/en/pension-circulars",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  },
+  {
+    "id": "gratuity-ceiling",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2022470",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  },
+  {
+    "id": "agnipath",
+    "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1833765",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  },
+  {
+    "id": "ups",
+    "url": "https://www.pfrda.org.in/en/web/pfrda/schemes/national-pension-system/unified-pension-scheme",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  },
+  {
+    "id": "civilian-leave",
+    "url": "https://cag.gov.in/uploads/retirements/DoP-PW-booklet-0604dcc19f198f0-35607318.pdf",
+    "exitCode": 22,
+    "httpStatus": "000",
+    "error": "curl: (22) The requested URL returned error: 403"
+  }
+]

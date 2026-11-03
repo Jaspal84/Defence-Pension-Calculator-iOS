@@ -30,7 +30,7 @@ struct PensionPDFExporter {
                 draw("India  •  Pension Calculation Report", x: margin, at: 51, font: .systemFont(ofSize: 12), color: .white)
                 draw("Developed by Jaspal Singh", x: margin, at: 76, font: .systemFont(ofSize: 10), color: gold)
                 draw("Generated: " + DateUtilities.text(Date()), x: margin, at: 790, font: .systemFont(ofSize: 8), color: .darkGray)
-                draw("Page \(page)  |  © 2026 Jaspal Singh", x: 359, at: 790, font: .systemFont(ofSize: 8), color: .darkGray)
+                draw("Developed by Jaspal Singh | Page \(page)", x: 359, at: 790, font: .systemFont(ofSize: 8), color: .darkGray)
                 y = 128
             }
             func ensure(_ height: CGFloat) { if y + height > bottom { beginPage() } }

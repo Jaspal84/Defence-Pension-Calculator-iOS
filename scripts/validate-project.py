@@ -28,4 +28,4 @@ privacy = plistlib.loads((app / 'PrivacyInfo.xcprivacy').read_bytes())
 assert privacy['NSPrivacyTracking'] is False
 assert privacy['NSPrivacyCollectedDataTypes'] == []
 assert all('TODO' not in p.read_text() for p in app.rglob('*.swift'))
-print(f'PASS: {len(refs)} source/resource references; 5 JSON files; scheme/launch XML; privacy plist; iOS 16 target settings; incomplete-data safeguards.')
+print(f'PASS: {len(refs)} source/resource references; 6 JSON files; scheme/launch XML; privacy plist; iOS 16 target settings; incomplete-data safeguards.')

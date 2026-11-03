@@ -1,4 +1,6 @@
-# Defence Pension Calculator
+# Defence Pension Calculator Pro – India
+
+Created and developed by **Jaspal Singh**. This native redesign adds a navy/gold dashboard, About Developer screen and professional PDF reports while preserving the original financial engines. See [Pro design and M1 build instructions](docs/PRO-DESIGN.md), [current validation](docs/PRO-VALIDATION.md), and [App Store preparation](docs/app-store/RELEASE.md). The separate PWA is on `feat/pension-pwa` and is not included in this native branch.
 
 Native, offline SwiftUI iOS 16+ application for exploring Indian armed forces pension calculations. Built with Swift 5 language compatibility and tested using Swift 6.0.3 for the platform-independent domain layer. No external package dependencies, login, analytics or calculation networking.
 
@@ -43,17 +45,17 @@ Required for Linux bootstrap: `download.swift.org` and `raw.githubusercontent.co
 
 ## Application workflow
 
-- **Calculator:** choose branch, personnel category, rank, dates, service duration, pay inclusion assumptions, regime and your own DR rate. View basic pension, DR and monthly estimate.
-- **Family:** separate disability/war injury and family screens. Disability uses the Calculator's service inputs. Eligibility and circumstances are explicit inputs. Special, liberalized and enhanced family modes enforce their respective user-confirmation gates; expired enhanced periods are rejected.
-- **Payments:** supply service basic pension, age next birthday, percentage, dates and a factor from your records for illustrative commutation. Without an explicit factor, missing official factors cause an error. Arrears support multiple DR change dates, partial months and previous payments.
+- **Pension Calculator (Home / Calculators):** choose branch, personnel category, rank, dates, service duration, pay inclusion assumptions, regime and your own DR rate. View basic pension, DR and monthly estimate.
+- **Disability / Family calculators:** separate disability/war injury and family screens. Disability uses the Calculator's service inputs. Eligibility and circumstances are explicit inputs. Special, liberalized and enhanced family modes enforce their respective user-confirmation gates; expired enhanced periods are rejected.
+- **Commutation / Arrears calculators:** supply service basic pension, age next birthday, percentage, dates and a factor from your records for illustrative commutation. Without an explicit factor, missing official factors cause an error. Arrears support multiple DR change dates, partial months and previous payments.
 - **OROP:** select exact branch, rank, service, cohort, pension category and revision. Until a verified table is supplied, displays “Official OROP table data unavailable for this selection.”
-- **Summary:** snapshot of the latest successful calculation, rule identifiers, limitations, text sharing and offline PDF generation. Calculations are independent; commutation is not silently combined with an earlier service result. Recalculate after input changes. A failed calculation clears the summary so it cannot be exported as a successful new result.
+- **Reports:** snapshot of the latest successful calculation, rule identifiers, limitations, text sharing and offline PDF generation. Calculations are independent; commutation is not silently combined with an earlier service result. Recalculate after input changes. A failed calculation clears the summary so it cannot be exported as a successful new result.
 
-Only a branch preference is retained in UserDefaults. Personal identifiers are not requested. PDFs contain only the current summary, use unique temporary file names and may be shared explicitly through the system share sheet.
+Only a branch preference and welcome-screen setting are retained in UserDefaults. Personal identifiers are not requested. PDFs contain only the current summary, use unique temporary file names and may be shared explicitly through the system share sheet.
 
 ## Architecture
 
-`Domain` contains typed Codable models, validation and pure engines. `Data` decodes bundled JSON and implements the injected rules protocol. `Presentation` uses an iOS 16-compatible `ObservableObject` view model and five navigation tabs. `Utilities` contains Indian currency/date handling and the UIKit PDF renderer. The Swift package shares these same domain sources, not a second implementation. Every application source and JSON resource is registered in the checked-in Xcode project.
+`Domain` contains typed Codable models, validation and pure engines, along with Foundation-only routing, developer metadata and report models. `Data` decodes bundled JSON and implements the injected rules protocol. `Presentation` uses an iOS 16-compatible `ObservableObject` view model and five navigation tabs. `Utilities` contains Indian currency/date handling and the UIKit PDF renderer. The Swift package shares these same domain sources, not a second implementation. Every application source and JSON resource is registered in the checked-in Xcode project.
 
 Currency calculations use Decimal. Inputs from the required Double convenience interfaces are checked for finiteness before conversion. Illustrative components round half up to two decimal places; this policy is disclosed and must not be confused with statutory rounding rules. India Gregorian calendar days drive arrears and restoration. Dates are inclusive for arrears; the restoration commencement is explicit and never inferred from retirement.
 
@@ -77,6 +79,6 @@ Before a verified rules release, obtain authoritative orders, record exact title
 
 ## Validation
 
-See [VALIDATION.md](VALIDATION.md) and [the recorded core XCTest output](validation/core-tests.txt). All numeric test examples are explicitly synthetic. No official example results are asserted. PDF content/pagination tests exist in the iOS test target and require a simulator. The project is suitable for continued local Xcode development; production acceptance remains blocked on verified rule data and actual iOS validation.
+See [current Pro validation](docs/PRO-VALIDATION.md) and [the Pro XCTest output](validation/pro-core-tests.txt). [VALIDATION.md](VALIDATION.md) records the earlier 44-test baseline. All numeric test examples are explicitly synthetic. No official example results are asserted. PDF content/pagination tests exist in the iOS test target and require a simulator. The project is suitable for continued local Xcode development; production acceptance remains blocked on verified rule data and actual iOS validation.
 
 > This calculator provides estimates based on selected pension rules and reference data. Final pension entitlement and payment are determined by the competent pension sanctioning authority and official PPO/SPARSH records.

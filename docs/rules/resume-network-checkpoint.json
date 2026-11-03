@@ -1,0 +1,17 @@
+{
+  "checkedAtUTC": "2026-11-03T02:51:52Z",
+  "observedSpecRevision": "1",
+  "observationsCurrent": true,
+  "networkMode": "restricted",
+  "networkState": "enforced",
+  "customAllowedHosts": [],
+  "requiredHostsPermitted": {
+    "desw.gov.in": false,
+    "www.pib.gov.in": false,
+    "www.pfrda.org.in": false,
+    "pfrda.org.in": false
+  },
+  "requestsRetried": false,
+  "newOriginHTTPStatus": null,
+  "reason": "User requested retry after publication/application. Current policy is unchanged and still excludes the supplied official hosts. Earlier proxy denials are not government-site responses."
+}

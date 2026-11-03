@@ -6,6 +6,10 @@ Audit date: 3 November 2026. Creator: Jaspal Singh.
 
 **No new calculator formula has been activated.** All six official URLs supplied in the task were requested through the configured HTTPS proxy with TLS verification enabled. Every request was denied with HTTP 403 before an origin response was received. The running environment's enforced custom allowlist is empty. Previously saved DESW additions are in the editable draft, not the running policy. This is an environment access blocker, not proof that a government site or document is unavailable.
 
+## Resume packet
+
+The follow-up source list and original-document download instructions are in [DOWNLOAD-PACKET.md](DOWNLOAD-PACKET.md). Its checkpoint records that the running policy remains revision 1 with no government-host additions applied. The follow-up URLs are preserved separately from historical retrieval evidence; no new proxy denial or government response is invented. The 64 Foundation tests were rerun successfully. Calculator code and bundled audit references remain unchanged until document inspection.
+
 ## Recorded evidence and data
 
 - `source-access-evidence.json` preserves each exact URL, curl exit code and error. Curl's origin status `000` means no origin response; it is not a government HTTP status.

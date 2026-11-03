@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "dataVersion": "2026-11-03.download-requests-1",
+  "purpose": "User-supplied download targets pending runtime network application and document inspection. Not verified rules.",
+  "requests": [
+    {
+      "id": "defence-regulations",
+      "exactURL": "https://desw.gov.in/pension-regulations",
+      "instruction": "Official regulations index; download the linked service/category-specific documents, not just the index.",
+      "inspectionStatus": "notInspected"
+    },
+    {
+      "id": "defence-circulars",
+      "exactURL": "https://desw.gov.in/index.php/en/pension-circulars",
+      "instruction": "Official circulars index; download operative orders, annexures, amendments and corrigenda for the benefit date.",
+      "inspectionStatus": "notInspected"
+    },
+    {
+      "id": "agnipath-followup",
+      "exactURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1834227&lang=1&reg=1",
+      "instruction": "User-supplied Ministry of Defence announcement candidate; distinct from the earlier PRID 1833765. Neither is independently inspected here.",
+      "inspectionStatus": "notInspected"
+    },
+    {
+      "id": "ups-overview",
+      "exactURL": "https://www.pfrda.org.in/en/web/pfrda/schemes/national-pension-system/unified-pension-scheme",
+      "instruction": "Overview/index candidate; obtain the actual gazette regulations and rules as well.",
+      "inspectionStatus": "notInspected"
+    },
+    {
+      "id": "ups-regulations-2025",
+      "exactURL": "https://www.pfrda.org.in/w/regulatory-framework/regulations/31-pension-fund-regulatory-and-development-authority-operationalisation-of-unified-pension-scheme-under-national-pension-system-regulation-2025",
+      "instruction": "Download the linked full UPS Regulations 2025 PDF with all schedules/annexures and applicable amendments.",
+      "inspectionStatus": "notInspected"
+    },
+    {
+      "id": "ccs-ups-rules-2025",
+      "exactURL": "https://pfrda.org.in/w/regulatory-framework/notifications/the-central-civil-services-implementation-of-the-unified-pension-scheme-under-the-national-pension-system-rules-2025",
+      "instruction": "Download the linked full CCS UPS Rules 2025 PDF with schedules/annexures and applicable amendments; do not infer military applicability.",
+      "inspectionStatus": "notInspected"
+    }
+  ]
+}

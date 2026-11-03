@@ -44,7 +44,12 @@ final class ProNavigationUITests: XCTestCase {
         for id in ["gratuity", "leaveEncashment", "sevaNidhi", "npsUPS"] {
             launchDashboard()
             app.tabBars.buttons["Calculators"].tap()
-            let row = app.descendants(matching: .any)["directory.\(id)"]; reveal(row); row.tap()
+            XCTAssertTrue(app.descendants(matching: .any)["screen.calculators"].waitForExistence(timeout: 10), "Calculators tab did not open")
+            let row = app.descendants(matching: .any)["directory.\(id)"]
+            XCTAssertTrue(row.waitForExistence(timeout: 10), "Missing calculator route \(id)")
+            reveal(row)
+            XCTAssertTrue(row.isHittable, "Calculator route \(id) is not hittable")
+            row.tap()
             XCTAssertTrue(app.staticTexts["Calculation unavailable"].waitForExistence(timeout: 5))
         }
     }

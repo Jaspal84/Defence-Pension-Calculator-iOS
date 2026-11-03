@@ -1,15 +1,15 @@
 {
-  "schemaVersion": 1,
-  "dataVersion": "2026-11-03.audit-1",
-  "purpose": "Research audit only. No executable benefit rules have been verified.",
-  "auditedAtUTC": "2026-11-03T02:46:05Z",
+  "schemaVersion": 2,
+  "dataVersion": "2026-11-03.audit-2",
+  "purpose": "Research provenance only. Document inspection and hash matching do not establish current entitlement. No executable benefit rules are contained here.",
+  "auditedAtUTC": "2026-11-03T11:05:50Z",
   "enabledRuleIDs": [],
   "sources": [
     {
       "id": "defence-regulations",
-      "requestedLabel": "Defence pension regulations (requested index)",
+      "requestedLabel": "Defence pension regulations index (historical request)",
       "sourceURL": "https://desw.gov.in/pension-regulations",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -25,9 +25,9 @@
     },
     {
       "id": "defence-circulars",
-      "requestedLabel": "Defence pension circulars (requested index)",
+      "requestedLabel": "Defence pension circulars index (historical request)",
       "sourceURL": "https://www.desw.gov.in/index.php/en/pension-circulars",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -43,9 +43,9 @@
     },
     {
       "id": "gratuity-ceiling",
-      "requestedLabel": "Government gratuity ceiling announcement (requested page)",
+      "requestedLabel": "Civilian gratuity ceiling announcement (not military authority)",
       "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2022470",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -61,9 +61,9 @@
     },
     {
       "id": "agnipath",
-      "requestedLabel": "Original Agnipath announcement and contribution table (requested page)",
+      "requestedLabel": "Earlier Agnipath press-release request; distinct from the inspected PRID 1834227 document below",
       "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1833765",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -79,9 +79,9 @@
     },
     {
       "id": "ups",
-      "requestedLabel": "PFRDA Unified Pension Scheme (requested page)",
+      "requestedLabel": "PFRDA UPS overview request (historical request; operative documents listed below)",
       "sourceURL": "https://www.pfrda.org.in/en/web/pfrda/schemes/national-pension-system/unified-pension-scheme",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -97,9 +97,9 @@
     },
     {
       "id": "civilian-leave",
-      "requestedLabel": "Civilian leave encashment reference (requested PDF)",
+      "requestedLabel": "Civilian leave-encashment reference request; not military authority",
       "sourceURL": "https://cag.gov.in/uploads/retirements/DoP-PW-booklet-0604dcc19f198f0-35607318.pdf",
-      "verificationStatus": "retrievalBlocked",
+      "verificationStatus": "retrievalBlockedAtPriorCheckpoint",
       "sourceTitle": null,
       "issuingAuthority": null,
       "documentNumber": null,
@@ -114,72 +114,282 @@
       "curlExitCode": 22
     }
   ],
+  "documents": [
+    {
+      "id": "army-pension-regulations-part-i-2008",
+      "localPath": "docs/rules/source-documents/army-pension-regulations-part-i-2008.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/PRA-Pt-I%282008%29.pdf",
+      "sourceTitle": "Pension Regulations for the Army, Part I (2008)",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": null,
+      "publicationDate": "2008",
+      "effectiveDate": "2008-07-01",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "82717d4e0f5137efdb6a3ff6ddea82a2afdbb14ca0fb61b9c3bd64f2a7a1cf76",
+      "applicability": "Base Army regulations; applicable amendments, current ceiling and category-specific scope remain to be completed."
+    },
+    {
+      "id": "army-pension-regulations-part-ii-2008",
+      "localPath": "docs/rules/source-documents/army-pension-regulations-part-ii-2008.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/PRA-Pt-II%282008%29.pdf",
+      "sourceTitle": "Pension Regulations for the Army, Part II (2008)",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": null,
+      "publicationDate": "2008",
+      "effectiveDate": null,
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "e0fc015d271c6b80d6fb8aa66a8a93b974086fda084cbe36b4c61120852f4f05",
+      "applicability": "Army procedure and administration companion; does not by itself complete operative gratuity amendments."
+    },
+    {
+      "id": "air-force-pension-regulations-part-i",
+      "localPath": "docs/rules/source-documents/air-force-pension-regulations-part-i.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/AF-PENSION-REGS-PART-I.pdf",
+      "sourceTitle": "Pension Regulations for the Air Force, Part I",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": null,
+      "publicationDate": "1960-08-31",
+      "effectiveDate": null,
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "fb94b51811a8d27a66659d3ee36a85710163d35ce9ee8911a8387bcff17c8c90",
+      "applicability": "Base Air Force text; applicable amendments, current ceiling and legacy-code scope remain incomplete."
+    },
+    {
+      "id": "air-force-pension-regulations-part-ii",
+      "localPath": "docs/rules/source-documents/air-force-pension-regulations-part-ii.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/AF-PENSION-REGS-PART-II.pdf",
+      "sourceTitle": "Pension Regulations for the Air Force, Part II",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": null,
+      "publicationDate": "1960-08-31",
+      "effectiveDate": null,
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "c853f73b7d0e9945195f3b436f5acd7db5dca6ec59fb09e153e74ce535de179b",
+      "applicability": "Base Air Force procedure text; does not complete the amendment chain for a current gratuity calculation."
+    },
+    {
+      "id": "navy-pension-regulations-1964",
+      "localPath": "docs/rules/source-documents/navy-pension-regulations-1964.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/NAVY-PEN-REG-1964.pdf",
+      "sourceTitle": "Navy (Pension) Regulations, 1964",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": "S.R.O. 74",
+      "publicationDate": "1964-02-10",
+      "effectiveDate": null,
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "fab7cc3ea1800c300e22c04143dd8c991c5ee1a517c48b515fc8623eaa4efb27",
+      "applicability": "Base Navy text; applicable amendments, category scope and current ceilings remain incomplete."
+    },
+    {
+      "id": "mod-gratuity-revision-order-2017",
+      "localPath": "docs/rules/source-documents/mod-gratuity-revision-order-2017.pdf",
+      "sourceURL": "https://desw.gov.in/sites/default/files/2107.09.04--Pen-Policy.pdf",
+      "sourceTitle": "7th CPC revision of pension/gratuity provisions for Armed Forces personnel",
+      "issuingAuthority": "Ministry of Defence / Department of Ex-Servicemen Welfare",
+      "documentNumber": "17(02)/2016-D(Pen/Pol)",
+      "publicationDate": "2017-09-04",
+      "effectiveDate": "2016-01-01",
+      "inspectionStatus": "hashMatchedOnly",
+      "sourceBodyInspected": false,
+      "contentSHA256": "59196b02aa8d6e4a9a01f5128c739cc6a1181af3decda5a85e6ccd1b6a793779",
+      "applicability": "Official amendment file is image-only in the saved copy; ceiling clauses require direct page-image verification."
+    },
+    {
+      "id": "agnipath-pib-prid-1834227",
+      "localPath": "docs/rules/source-documents/agnipath-pib-prid-1834227.html",
+      "sourceURL": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1834227&lang=1&reg=1",
+      "sourceTitle": "In a transformative reform, Cabinet clears Agnipath scheme for recruitment of youth in the Armed Forces",
+      "issuingAuthority": "Ministry of Defence / Press Information Bureau",
+      "documentNumber": "PIB Release ID 1834227",
+      "publicationDate": "2022-06-15",
+      "effectiveDate": null,
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "70ba56a50b03959dbc9847187f2bbcc016f495c969d556a7c2ddb51bd6eea68e",
+      "applicability": "Press release verifies its published schedule and approximate interest-inclusive figure only; implementation and interest instructions remain missing."
+    },
+    {
+      "id": "ccs-nps-rules-2021",
+      "localPath": "docs/rules/source-documents/ccs-nps-rules-2021.pdf",
+      "sourceURL": "https://pfrda.org.in/documents/33652/170175/31%2BThe%2BCentral%2BCivil%2BServices%2B%28Implementation%2Bof%2BNational%2BPension%2BSystem%29%2BRules%2C%2B2021.pdf",
+      "sourceTitle": "Central Civil Services (Implementation of National Pension System) Rules, 2021",
+      "issuingAuthority": "Ministry of Personnel, Public Grievances and Pensions / Department of Pension and Pensioners' Welfare",
+      "documentNumber": "G.S.R. 227(E)",
+      "publicationDate": "2021-03-30",
+      "effectiveDate": "2004-01-01",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "e14d3298aa88bac97ca0bfe00d819b731d391da491c09793c0b220ac94e9a395",
+      "applicability": "Central Government civil service scope; excludes personnel permanently subject to the Army, Air Force or Navy Acts."
+    },
+    {
+      "id": "nps-central-government-contribution-amendment-2019",
+      "localPath": "docs/rules/source-documents/nps-central-government-contribution-amendment-2019.pdf",
+      "sourceURL": "https://pfrda.org.in/documents/33652/170175/Gazette-notification-Revision-in-NPS-Government-sector.pdf",
+      "sourceTitle": "Revision in NPS Government sector contribution rates",
+      "issuingAuthority": "Ministry of Finance / Department of Financial Services",
+      "documentNumber": "F. No. 1/3/2016-PR",
+      "publicationDate": "2019-01-31",
+      "effectiveDate": "2019-04-01",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "e043c6cbda31cbbdaf6b1b7bec4edd7becf0184441ba51a008f0561d3f075766",
+      "applicability": "Central Government NPS contribution amendment; not a universal NPS subscriber rate."
+    },
+    {
+      "id": "pfrda-nps-exits-withdrawals-2026-consolidated",
+      "localPath": "docs/rules/source-documents/pfrda-nps-exits-withdrawals-2015-amended-2026.pdf",
+      "sourceURL": "https://pfrda.org.in/documents/33652/184762/PFRDA%2BExits%2Band%2BWithdrawals%2Bunder%2Bthe%2BNPS%2BRegulations%2B2015%2B_Last%2Bamended%2Bon%2B20%2BJuly%2B2026_%2B%281%29.pdf",
+      "sourceTitle": "PFRDA (Exits and Withdrawals under the NPS) Regulations, 2015, consolidated",
+      "issuingAuthority": "Pension Fund Regulatory and Development Authority",
+      "documentNumber": "PFRDA/12/RGL/139/8",
+      "publicationDate": "2015-05-11",
+      "effectiveDate": "2026-07-20",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "487099408fdc5224b8ed173daf5d6b51a32b0ebadef13e38a2ae924257321f5c",
+      "applicability": "Consolidated NPS exit regulations; subscriber-category and investment/annuity assumptions remain distinct and not guaranteed."
+    },
+    {
+      "id": "ccs-ups-rules-2025",
+      "localPath": "docs/rules/source-documents/ccs-ups-rules-2025.pdf",
+      "sourceURL": "https://www.pfrda.org.in/documents/33652/184762/UPS%2BRules%2B03092025.pdf",
+      "sourceTitle": "Central Civil Services (Implementation of the Unified Pension Scheme under NPS) Rules, 2025",
+      "issuingAuthority": "Ministry of Personnel, Public Grievances and Pensions / Department of Pension and Pensioners' Welfare",
+      "documentNumber": "G.S.R. 599(E)",
+      "publicationDate": "2025-09-02",
+      "effectiveDate": "2025-09-02",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "6bf87a80ddd82f4eedf4b81afda2eb95d3159ee504b1f5a0b9ea3d4b701f3606",
+      "applicability": "Central Government NPS subscribers opting into UPS; does not establish regular Armed Forces applicability."
+    },
+    {
+      "id": "pfrda-ups-regulations-2025",
+      "localPath": "docs/rules/source-documents/pfrda-ups-regulations-2025.pdf",
+      "sourceURL": "https://www.pfrda.org.in/documents/33652/184762/31%2BPension%2BFund%2BRegulatory%2Band%2BDevelopment%2BAuthority%2B%28Operationalisation%2Bof%2BUnified%2BPension%2BScheme%2Bunder%2BNational%2BPension%2BSystem%29%2BRegulation%2C%2B2025.pdf",
+      "sourceTitle": "PFRDA (Operationalisation of Unified Pension Scheme under NPS) Regulations, 2025",
+      "issuingAuthority": "Pension Fund Regulatory and Development Authority",
+      "documentNumber": "PFRDA-12/01/0001/2023-LEGAL",
+      "publicationDate": "2025-03-19",
+      "effectiveDate": "2025-04-01",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "daa5d0a70f465f61a26d847f26023a438c5d5030453165816bd578aa8beb8fd5",
+      "applicability": "UPS implementation framework for eligible Central Government NPS subscribers who opt in; later options and service inputs still require scenario-specific review."
+    },
+    {
+      "id": "pfrda-ups-amendment-2025",
+      "localPath": "docs/rules/source-documents/pfrda-ups-amendment-2025.pdf",
+      "sourceURL": "https://www.pfrda.org.in/documents/33652/184762/Gazette%2BPFRDA%2BOperationalisation%2Bof%2BUPS%2Bunder%2BNPS%2BAmendment%2BRegulations%2C%2B2025.pdf",
+      "sourceTitle": "PFRDA (Operationalisation of UPS under NPS) Amendment Regulations, 2025",
+      "issuingAuthority": "Pension Fund Regulatory and Development Authority",
+      "documentNumber": "PFRDA-16/07/0001/2025-SUP-CG",
+      "publicationDate": "2025-12-23",
+      "effectiveDate": "2025-12-23",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "dab4ba85ed9ec14868ac69936d71df2884b7f16185ed4f3eaf0af0b120baf1cc",
+      "applicability": "Amends UPS rules; option deadline and applicability must be checked for each intended subscriber scenario."
+    },
+    {
+      "id": "pfrda-nps-exits-amendment-2026",
+      "localPath": "docs/rules/source-documents/pfrda-nps-exits-amendment-2026.pdf",
+      "sourceURL": "https://npstrust.org.in/sites/default/files/act-and-regulations-documents/PFRDA.pdf",
+      "sourceTitle": "PFRDA (Exits and Withdrawals under the NPS) (Amendment) Regulations, 2026",
+      "issuingAuthority": "Pension Fund Regulatory and Development Authority / National Pension System Trust",
+      "documentNumber": "PFRDA/16/14/06/0009/2018-REG-EXIT",
+      "publicationDate": "2026-07-14",
+      "effectiveDate": "2026-07-14",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "c7a8ae58fb9ce27133a49b18a23299f86129840ca11e8c01f235b80af5a5299c",
+      "applicability": "Amends Regulation 4A on specific-purpose schemes and pension-fund responsibility; does not amend ordinary exit thresholds or UPS payout terms."
+    },
+    {
+      "id": "dfs-ups-original-notification-2025",
+      "localPath": "docs/rules/source-documents/dfs-ups-original-notification-2025.pdf",
+      "sourceURL": "https://financialservices.gov.in/sites/default/files/ups/2026-01/Gazette_Notification.pdf",
+      "sourceTitle": "Unified Pension Scheme notification",
+      "issuingAuthority": "Ministry of Finance / Department of Financial Services",
+      "documentNumber": "F. No. FX-1/3/2024-PR",
+      "publicationDate": "2025-01-25",
+      "effectiveDate": "2025-01-24",
+      "inspectionStatus": "contentInspected",
+      "sourceBodyInspected": true,
+      "contentSHA256": "e722b36de8c32ef9791cbf9581018c6d0e5bf12db0a1f00fe71f587467ce4c2b",
+      "applicability": "UPS option for Central Government employees covered under NPS who opt in; does not establish applicability to regular Armed Forces."
+    }
+  ],
   "benefits": [
+    {
+      "id": "retiringGratuity",
+      "title": "Retiring gratuity",
+      "decision": "disabled",
+      "sourceIDs": ["army-pension-regulations-part-i-2008", "air-force-pension-regulations-part-i", "navy-pension-regulations-1964", "mod-gratuity-revision-order-2017"],
+      "applicabilityPending": "Service, personnel category, commission type and operative order coverage are not complete; terminology must not be merged with retirement or service gratuity.",
+      "verificationRequired": "Verify service-specific eligibility, certified service counting, reckonable emoluments, effective ceilings and rounding. The 2017 order copy is hash-matched but its image-only clauses were not directly inspected."
+    },
     {
       "id": "retirementGratuity",
       "title": "Retirement gratuity",
       "decision": "disabled",
-      "sourceIDs": [
-        "defence-regulations",
-        "defence-circulars",
-        "gratuity-ceiling"
-      ],
-      "applicabilityPending": "Army, Navy and Air Force categories require separate applicability review.",
-      "verificationRequired": "Verify military authority, retirement/invalidment distinctions, eligible emoluments and DA, completed service periods, minimum service, effective ceiling and statutory rounding. The civilian ceiling announcement alone does not establish a military ceiling."
+      "sourceIDs": ["army-pension-regulations-part-i-2008", "air-force-pension-regulations-part-i", "navy-pension-regulations-1964", "mod-gratuity-revision-order-2017"],
+      "applicabilityPending": "Army, Navy and Air Force category and event applicability remain separate and incomplete.",
+      "verificationRequired": "Verify retirement versus invalidment, certified qualifying-service boundaries, reckonable pay and DA, applicable current ceiling, amendments and statutory rounding."
+    },
+    {
+      "id": "serviceGratuity",
+      "title": "Service gratuity",
+      "decision": "disabled",
+      "sourceIDs": ["army-pension-regulations-part-i-2008", "air-force-pension-regulations-part-i", "navy-pension-regulations-1964", "mod-gratuity-revision-order-2017"],
+      "applicabilityPending": "Eligibility and interaction with pension/retirement gratuity have not been established for each service and category.",
+      "verificationRequired": "Verify qualifying-service threshold, qualifying period treatment, emoluments, discharge grounds, prior service, amendments, ceiling and rounding independently."
     },
     {
       "id": "deathGratuity",
       "title": "Death gratuity",
       "decision": "disabled",
-      "sourceIDs": [
-        "defence-regulations",
-        "defence-circulars",
-        "gratuity-ceiling"
-      ],
-      "applicabilityPending": "Military death benefits must be distinguished from retirement gratuity.",
-      "verificationRequired": "Verify service-specific death-benefit slabs, service boundaries, eligible emoluments, applicable ceilings, dates and rounding independently of retirement gratuity."
+      "sourceIDs": ["army-pension-regulations-part-i-2008", "air-force-pension-regulations-part-i", "navy-pension-regulations-1964", "mod-gratuity-revision-order-2017"],
+      "applicabilityPending": "Military death benefits must remain distinct from all separation gratuity types.",
+      "verificationRequired": "Verify service-specific slabs, service boundaries, eligible emoluments, applicable ceilings, event dates, prior service and rounding independently."
     },
     {
       "id": "leaveEncashment",
       "title": "Leave encashment",
       "decision": "disabled",
-      "sourceIDs": [
-        "defence-regulations",
-        "defence-circulars",
-        "civilian-leave"
-      ],
-      "applicabilityPending": "The supplied CAG booklet is identified by the user as civilian; it is not military authority.",
-      "verificationRequired": "Retrieve separate Army/Navy/Air Force leave orders, eligible leave categories, pay definitions, DA, ceilings and restrictions. Do not import CCS civilian rules into military results."
+      "sourceIDs": ["army-pension-regulations-part-i-2008", "air-force-pension-regulations-part-i", "navy-pension-regulations-1964"],
+      "applicabilityPending": "Referenced pension texts are not the complete service leave authorities; civilian leave rules do not establish military entitlement.",
+      "verificationRequired": "Retrieve operative Army, Navy and Air Force leave rules, amendments, balances, pay definitions, DA, limits, restrictions and exit distinctions."
     },
     {
       "id": "sevaNidhi",
       "title": "Agniveer Seva Nidhi",
       "decision": "disabled",
-      "sourceIDs": [
-        "agnipath"
-      ],
+      "sourceIDs": ["agnipath-pib-prid-1834227"],
       "applicabilityPending": "Agniveer four-year engagement; regular military pension/gratuity must not be inferred.",
-      "verificationRequired": "Inspect the original contribution table and any applicable amendments before activation. The schedule and indicative exit amount in the task are not independently verified here. No authoritative interest rate, compounding method or guaranteed payout is assumed."
+      "verificationRequired": "The PIB release's four-year schedule, matching contributions and approximate interest-inclusive amount are verified as statements in that release only. Obtain service implementation orders, authoritative interest and crediting instructions, amendments, and abnormal-exit rules before calculating any payout."
     },
     {
       "id": "nps",
       "title": "NPS estimator",
       "decision": "disabled",
-      "sourceIDs": [
-        "ups"
-      ],
-      "applicabilityPending": "Eligible NPS subscribers require their own scheme-specific authority; regular Armed Forces applicability is not established.",
-      "verificationRequired": "Obtain the applicable NPS notifications separately. Verify subscriber eligibility, contribution rates, corpus/withdrawal and annuitisation rules. Investment returns and annuity quotations cannot be guaranteed."
+      "sourceIDs": ["ccs-nps-rules-2021", "nps-central-government-contribution-amendment-2019", "pfrda-nps-exits-withdrawals-2026-consolidated", "pfrda-nps-exits-amendment-2026"],
+      "applicabilityPending": "Central Government civil NPS scope is documented; other subscriber categories and regular Armed Forces applicability are not established here.",
+      "verificationRequired": "Obtain category-specific rules for any other subscriber group. Investment returns and annuity quotations remain assumptions; no guaranteed projection is supported."
     },
     {
       "id": "ups",
       "title": "UPS estimator",
       "decision": "disabled",
-      "sourceIDs": [
-        "ups"
-      ],
-      "applicabilityPending": "Eligible civilian subscribers only where the applicable notification establishes eligibility; not automatically regular Armed Forces.",
-      "verificationRequired": "Verify operative notification, dates/amendments, qualifying service and minimum payout conditions, individual/benchmark corpus adjustment, withdrawal reduction, family payout and contribution rules."
+      "sourceIDs": ["dfs-ups-original-notification-2025", "ccs-ups-rules-2025", "pfrda-ups-regulations-2025", "pfrda-ups-amendment-2025"],
+      "applicabilityPending": "Eligible Central Government NPS subscribers who opt into UPS; not automatically regular Armed Forces.",
+      "verificationRequired": "Complete option/deadline amendments and scenario-specific eligibility, service certification, pay, exit, corpus adjustment, final withdrawal and family-payout requirements before implementation."
     }
   ]
 }

@@ -32,3 +32,34 @@ struct CalculationSummary: Codable, Sendable {
         }
     }
 }
+
+/// Creates a gratuity PDF payload only when the bundled authoritative audit repository
+/// independently authorizes the applied rules. Caller-supplied metadata is descriptive only.
+enum GratuityPDFReportFactory {
+    static func summary<Result: GratuityCalculationResult>(from outcome: GratuityCalculationOutcome<Result>) -> CalculationSummary? {
+        guard case .calculated(let result) = outcome else { return nil }
+        let evidence = result.evidence
+        let metadataIDs = evidence.ruleMetadata.map(\.id)
+        guard !evidence.dataVersion.isEmpty,
+              !evidence.appliedRuleIDs.isEmpty,
+              Set(metadataIDs).count == metadataIDs.count,
+              Set(metadataIDs) == Set(evidence.appliedRuleIDs),
+              evidence.ruleMetadata.allSatisfy({ $0.verified && $0.dataVersion == evidence.dataVersion }),
+              let repository = try? BenefitRuleAuditRepository(),
+              repository.authorizesGratuityPDF(
+                benefitID: result.benefitType.rawValue,
+                appliedRuleIDs: evidence.appliedRuleIDs,
+                eventDate: evidence.eventDate
+              ) else { return nil }
+
+        return CalculationSummary(
+            title: result.benefitType.title,
+            date: evidence.eventDate,
+            status: .verified,
+            rows: [SummaryRow(title: "Gratuity amount", value: Money.format(evidence.amount))],
+            assumptions: evidence.assumptions,
+            rules: evidence.appliedRuleIDs,
+            ruleMetadata: evidence.ruleMetadata
+        )
+    }
+}

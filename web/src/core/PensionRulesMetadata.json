@@ -1,0 +1,14 @@
+[
+  {
+    "id": "illustrative-v1",
+    "sourceTitle": "Calculator illustrative assumptions, not an official pension order",
+    "issuingAuthority": "Application reference model",
+    "orderNumber": null,
+    "effectiveDate": null,
+    "publicationDate": null,
+    "sourceURL": null,
+    "applicability": "Synthetic arithmetic only. No verified statutory entitlement; no official OROP, commutation or pay matrix data bundled.",
+    "dataVersion": "1.0.0-incomplete",
+    "verified": false
+  }
+]

@@ -1,0 +1,290 @@
+[
+  {
+    "id": "army-lieutenant",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Lieutenant"
+  },
+  {
+    "id": "army-captain",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Captain"
+  },
+  {
+    "id": "army-major",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Major"
+  },
+  {
+    "id": "army-lieutenant-colonel",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Lieutenant Colonel"
+  },
+  {
+    "id": "army-colonel",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Colonel"
+  },
+  {
+    "id": "army-brigadier",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Brigadier"
+  },
+  {
+    "id": "army-major-general",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Major General"
+  },
+  {
+    "id": "army-lieutenant-general",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "Lieutenant General"
+  },
+  {
+    "id": "army-general",
+    "branch": "Army",
+    "category": "Commissioned Officer",
+    "name": "General"
+  },
+  {
+    "id": "army-naib-subedar",
+    "branch": "Army",
+    "category": "JCO / equivalent",
+    "name": "Naib Subedar"
+  },
+  {
+    "id": "army-subedar",
+    "branch": "Army",
+    "category": "JCO / equivalent",
+    "name": "Subedar"
+  },
+  {
+    "id": "army-subedar-major",
+    "branch": "Army",
+    "category": "JCO / equivalent",
+    "name": "Subedar Major"
+  },
+  {
+    "id": "army-sepoy",
+    "branch": "Army",
+    "category": "Other Rank",
+    "name": "Sepoy"
+  },
+  {
+    "id": "army-lance-naik",
+    "branch": "Army",
+    "category": "Other Rank",
+    "name": "Lance Naik"
+  },
+  {
+    "id": "army-naik",
+    "branch": "Army",
+    "category": "Other Rank",
+    "name": "Naik"
+  },
+  {
+    "id": "army-havildar",
+    "branch": "Army",
+    "category": "Other Rank",
+    "name": "Havildar"
+  },
+  {
+    "id": "navy-sub-lieutenant",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Sub Lieutenant"
+  },
+  {
+    "id": "navy-lieutenant",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Lieutenant"
+  },
+  {
+    "id": "navy-lieutenant-commander",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Lieutenant Commander"
+  },
+  {
+    "id": "navy-commander",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Commander"
+  },
+  {
+    "id": "navy-captain",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Captain"
+  },
+  {
+    "id": "navy-commodore",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Commodore"
+  },
+  {
+    "id": "navy-rear-admiral",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Rear Admiral"
+  },
+  {
+    "id": "navy-vice-admiral",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Vice Admiral"
+  },
+  {
+    "id": "navy-admiral",
+    "branch": "Navy",
+    "category": "Commissioned Officer",
+    "name": "Admiral"
+  },
+  {
+    "id": "navy-chief-petty-officer",
+    "branch": "Navy",
+    "category": "JCO / equivalent",
+    "name": "Chief Petty Officer"
+  },
+  {
+    "id": "navy-master-chief-petty-officer-ii",
+    "branch": "Navy",
+    "category": "JCO / equivalent",
+    "name": "Master Chief Petty Officer II"
+  },
+  {
+    "id": "navy-master-chief-petty-officer-i",
+    "branch": "Navy",
+    "category": "JCO / equivalent",
+    "name": "Master Chief Petty Officer I"
+  },
+  {
+    "id": "navy-seaman-ii",
+    "branch": "Navy",
+    "category": "Other Rank",
+    "name": "Seaman II"
+  },
+  {
+    "id": "navy-seaman-i",
+    "branch": "Navy",
+    "category": "Other Rank",
+    "name": "Seaman I"
+  },
+  {
+    "id": "navy-leading-seaman",
+    "branch": "Navy",
+    "category": "Other Rank",
+    "name": "Leading Seaman"
+  },
+  {
+    "id": "navy-petty-officer",
+    "branch": "Navy",
+    "category": "Other Rank",
+    "name": "Petty Officer"
+  },
+  {
+    "id": "air-force-flying-officer",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Flying Officer"
+  },
+  {
+    "id": "air-force-flight-lieutenant",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Flight Lieutenant"
+  },
+  {
+    "id": "air-force-squadron-leader",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Squadron Leader"
+  },
+  {
+    "id": "air-force-wing-commander",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Wing Commander"
+  },
+  {
+    "id": "air-force-group-captain",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Group Captain"
+  },
+  {
+    "id": "air-force-air-commodore",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Air Commodore"
+  },
+  {
+    "id": "air-force-air-vice-marshal",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Air Vice Marshal"
+  },
+  {
+    "id": "air-force-air-marshal",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Air Marshal"
+  },
+  {
+    "id": "air-force-air-chief-marshal",
+    "branch": "Air Force",
+    "category": "Commissioned Officer",
+    "name": "Air Chief Marshal"
+  },
+  {
+    "id": "air-force-warrant-officer",
+    "branch": "Air Force",
+    "category": "JCO / equivalent",
+    "name": "Warrant Officer"
+  },
+  {
+    "id": "air-force-master-warrant-officer",
+    "branch": "Air Force",
+    "category": "JCO / equivalent",
+    "name": "Master Warrant Officer"
+  },
+  {
+    "id": "air-force-aircraftman",
+    "branch": "Air Force",
+    "category": "Other Rank",
+    "name": "Aircraftman"
+  },
+  {
+    "id": "air-force-leading-aircraftman",
+    "branch": "Air Force",
+    "category": "Other Rank",
+    "name": "Leading Aircraftman"
+  },
+  {
+    "id": "air-force-corporal",
+    "branch": "Air Force",
+    "category": "Other Rank",
+    "name": "Corporal"
+  },
+  {
+    "id": "air-force-sergeant",
+    "branch": "Air Force",
+    "category": "Other Rank",
+    "name": "Sergeant"
+  },
+  {
+    "id": "air-force-junior-warrant-officer",
+    "branch": "Air Force",
+    "category": "JCO / equivalent",
+    "name": "Junior Warrant Officer"
+  }
+]
